@@ -23,7 +23,7 @@ from sklearn.metrics import confusion_matrix
 
 # class definition
 class LSTM(nn.Module):
-    def __init__(self, input_dim, hidden_dim, batch_size, output_dim=8, num_layers=2):
+    def __init__(self, input_dim, hidden_dim, batch_size, output_dim=6, num_layers=2):
         super(LSTM, self).__init__()
         self.input_dim = input_dim
         self.hidden_dim = hidden_dim
@@ -98,7 +98,7 @@ def main():
     # Define model
     print("Build LSTM RNN model ...")
     model = LSTM(
-        input_dim=33, hidden_dim=128, batch_size=batch_size, output_dim=8, num_layers=2
+        input_dim=33, hidden_dim=128, batch_size=batch_size, output_dim=6, num_layers=2
     )
     loss_function = nn.NLLLoss()  # expects ouputs from LogSoftmax
 
