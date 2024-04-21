@@ -4,12 +4,6 @@
 """
     PyTorch implementation of a simple 2-layer-deep LSTM for genre classification of musical audio.
     Feeding the LSTM stack are spectral {centroid, contrast}, chromagram & MFCC features (33 total values)
-
-    Question: Why is there a PyTorch implementation, when we already have Keras/Tensorflow?
-    Answer:   So that we can learn more PyTorch and experiment with modulations on basic
-              architectures within the space of an "easy problem". For example, SRU or SincNets.
-              I'm am also curious about the relative performances of both toolkits.
-
 """
 
 import os
@@ -98,7 +92,7 @@ def main():
     savefig = True
 
     batch_size = 35  # num of training examples per minibatch
-    num_epochs = 10
+    num_epochs = 1000
     learning_rate = 0.00003
 
     # Define model
