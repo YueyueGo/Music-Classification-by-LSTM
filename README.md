@@ -8,7 +8,7 @@ After I ran the original project, I found that the training process oscillated a
 
 After trying many times, I found a better learning rate `0.00003`. But the training process still oscillated a lot. So I tried 2 methods to solve this problem:
 
-1. Using Piecewise Decay method
+1. **Using Piecewise Decay method:**
 
     Set the learning rate to decay to 0.1 at 30% of the training period, and to 0.01 at 60% of the training period. The result is:
 
@@ -23,7 +23,7 @@ After trying many times, I found a better learning rate `0.00003`. But the train
     ![](./result/PiecewiseDecay/confusion_mat.png)
 
 
-2. Using Reduce LR On Plat:
+2. **Using Reduce LR On Plat:**
 
     Once found that the validation loss did not improve over a period of time, reduce the learning rate to 10% of the original. And set a cool period of 10 iterations.
 
