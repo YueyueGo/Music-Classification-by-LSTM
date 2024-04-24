@@ -12,8 +12,6 @@ class GenreFeatureData:
     hop_length = None
     genre_list = [
         "classical",
-        # "country",
-        # "disco",
         "hiphop",
         "jazz",
         "metal",
