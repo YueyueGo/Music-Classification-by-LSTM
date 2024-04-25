@@ -2,7 +2,7 @@ This project is developed based on @ruohoruotsi 's project [`LSTM-Music-Genre-Cl
 
 # Introduction
 
-![](model.png)
+![](./model/model.png)
 
 After I ran the original project, I found that the training process oscillated a lot. So according to the optimized advice, I tried to find a better learning rate for this training.
 
@@ -67,7 +67,9 @@ We can see that the training process is much more stable now.
 
     * [`predict.py`](./predict.py): A small script to get classification probabilities for music using the model. You can use this script like that:
 
+        ```python
         python predict.py ./path/to/your/file.wav
+        ```
 
 # Discussion and Conclusion
 
