@@ -3,6 +3,7 @@ import sys
 import librosa
 import torch
 import numpy as np
+import matplotlib.pyplot as plt
 
 from GenreFeatureData import (
     GenreFeatureData,
@@ -68,11 +69,17 @@ def main():
     PATH = sys.argv[1] if len(sys.argv) == 2 else "./gtzan/_validation/classical.00010.au"
     MODEL = load_model("./model/model.pt")
     PROBABILITIES = get_probabilities(MODEL, PATH)
-    
+
     print("--------------------result--------------------")
     # Print predicted class probabilities
     for i in range(len(GenreFeatureData.genre_list)):
         print(f"Probability for {GenreFeatureData.genre_list[i]}: {PROBABILITIES[i]}")
+
+    plt.bar(GenreFeatureData.genre_list, PROBABILITIES)
+    plt.title("Music Genre Predict Probabilities")
+    plt.xlabel("Genre")
+    plt.ylabel("Probability")
+    plt.show()
 
 if __name__ == "__main__":
     main()
