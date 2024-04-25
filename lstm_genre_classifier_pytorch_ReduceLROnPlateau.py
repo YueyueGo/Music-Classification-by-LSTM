@@ -262,6 +262,8 @@ def main():
                     plt.savefig('./result/ReduceLROnPlateau/confusion_mat.png')
                 plt.show()
 
+    torch.save(model.state_dict(), './model/model.pt')
+
     # visualization learning rate
     plt.plot(train_epoch_list, train_lr)
     plt.xlabel("Epochs")

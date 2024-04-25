@@ -61,9 +61,13 @@ We can see that the training process is much more stable now.
 
     * [`generate_music_plots.py`](./generate_music_plots.py): A small script to generate plots of MFCC (Mel Frequency Cepstrum Coefficient), Spectral Center, Chromaticity feature and Spectral Contrast.
 
-    * [`weights`](./weights/): Trained model weights and model architecture.
+    * [`model`](./model/): Trained model weights and model architecture.
 
     * [`result`](./result/): Save the plots of training process and confusion matrix.
+
+    * [`predict.py`](./predict.py): A small script to get classification probabilities for music using the model. You can use this script like that:
+
+        python predict.py ./path/to/your/file.wav
 
 # Discussion and Conclusion
 
