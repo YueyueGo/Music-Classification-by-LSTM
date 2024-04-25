@@ -1,9 +1,10 @@
+import sys
 import librosa
 import librosa.display
 import matplotlib.pyplot as plt
 
 # load file
-audio_path = './gtzan/_train/classical.00030.au'
+audio_path = sys.argv[1] if len(sys.argv) == 2 else './gtzan/_train/classical.00030.au'
 y, sr = librosa.load(audio_path)
 
 # MFCC

@@ -47,6 +47,12 @@ We can see that the training process is much more stable now.
 
     Dependencies: `torch`, `librosa`, `numpy`, `matplotlib`
 
+    You can install required modules like that:
+
+    ```python
+    pip install -r ./env/requirements.txt
+    ```
+
     The environment Backup for Anaconda is [`MusicClassificationEnv.yaml`](./MusicClassificationEnv.yaml)
 
 2. Files
@@ -59,7 +65,11 @@ We can see that the training process is much more stable now.
 
     * [`lstm_genre_classifier_pytorch_ReduceLROnPlateau.py`](./lstm_genre_classifier_pytorch_ReduceLROnPlateau.py): Training with Reduce LR On Plateau method.
 
-    * [`generate_music_plots.py`](./generate_music_plots.py): A small script to generate plots of MFCC (Mel Frequency Cepstrum Coefficient), Spectral Center, Chromaticity feature and Spectral Contrast.
+    * [`generate_music_plots.py`](./generate_music_plots.py): A small script to generate plots of MFCC (Mel Frequency Cepstrum Coefficient), Spectral Center, Chromaticity feature and Spectral Contrast. You can use this script like that:
+
+        ```python
+        python generate_music_plots.py ./path/to/your/file.wav
+        ```
 
     * [`model`](./model/): Trained model weights and model architecture.
 
