@@ -59,7 +59,7 @@ We can see that the training process is much more stable now.
 
     * [`gtzan`](./gtzan/): GTZAN dataset.
 
-    * [`GenreFeatureData`](./GenreFeatureData.py): Generate the training set, test set and validation set from original gtzan dataset. **If you want to regenerate the training set, please delete `.npy` files in `./gtzan` first!**
+    * [`GenreFeatureData`](./GenreFeatureData.py): Generate the training set, test set and validation set from original gtzan dataset. **If you want to regenerate the training set, please delete `.npy` files in [`gtzan`](./gtzan/) first!**
 
     * [`lstm_genre_classifier_pytorch_PiecewiseDecay.py`](./lstm_genre_classifier_pytorch_PiecewiseDecay.py): Training with Piecewise Decay method.
 
@@ -80,6 +80,9 @@ We can see that the training process is much more stable now.
         ```python
         python predict.py ./path/to/your/file.wav
         ```
+
+    * [`audio`](./audio/): 8 songs for you to try [`predict.py`](./predict.py).
+
 
 # Discussion and Conclusion
 

@@ -66,7 +66,7 @@ def get_probabilities(model,path):
 
 
 def main():
-    PATH = sys.argv[1] if len(sys.argv) == 2 else "./gtzan/_validation/classical.00010.au"
+    PATH = sys.argv[1] if len(sys.argv) == 2 else "./audio/classical_music.mp3"
     MODEL = load_model("./model/model.pt")
     PROBABILITIES = get_probabilities(MODEL, PATH)
 

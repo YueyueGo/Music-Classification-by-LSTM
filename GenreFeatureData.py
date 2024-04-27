@@ -21,15 +21,15 @@ class GenreFeatureData:
 
     dir_trainfolder = "./gtzan/_train"
     dir_devfolder = "./gtzan/_validation"
-    dir_testfolder = "./gtzan/_test"
+    # dir_testfolder = "./gtzan/_test"
     dir_all_files = "./gtzan"
 
     train_X_preprocessed_data = "./gtzan/data_train_input.npy"
     train_Y_preprocessed_data = "./gtzan/data_train_target.npy"
     dev_X_preprocessed_data = "./gtzan/data_validation_input.npy"
     dev_Y_preprocessed_data = "./gtzan/data_validation_target.npy"
-    test_X_preprocessed_data = "./gtzan/data_test_input.npy"
-    test_Y_preprocessed_data = "./gtzan/data_test_target.npy"
+    # test_X_preprocessed_data = "./gtzan/data_test_input.npy"
+    # test_Y_preprocessed_data = "./gtzan/data_test_target.npy"
 
     train_X = train_Y = None
     dev_X = dev_Y = None
@@ -41,12 +41,12 @@ class GenreFeatureData:
         self.timeseries_length_list = []
         self.trainfiles_list = self.path_to_audiofiles(self.dir_trainfolder)
         self.devfiles_list = self.path_to_audiofiles(self.dir_devfolder)
-        self.testfiles_list = self.path_to_audiofiles(self.dir_testfolder)
+        # self.testfiles_list = self.path_to_audiofiles(self.dir_testfolder)
 
         self.all_files_list = []
         self.all_files_list.extend(self.trainfiles_list)
         self.all_files_list.extend(self.devfiles_list)
-        self.all_files_list.extend(self.testfiles_list)
+        # self.all_files_list.extend(self.testfiles_list)
 
         # compute minimum timeseries length, slow to compute, caching pre-computed value of 1290
         # self.precompute_min_timeseries_len()
@@ -96,8 +96,8 @@ class GenreFeatureData:
         self.dev_X = np.load(self.dev_X_preprocessed_data)
         self.dev_Y = np.load(self.dev_Y_preprocessed_data)
 
-        self.test_X = np.load(self.test_X_preprocessed_data)
-        self.test_Y = np.load(self.test_Y_preprocessed_data)
+        # self.test_X = np.load(self.test_X_preprocessed_data)
+        # self.test_Y = np.load(self.test_Y_preprocessed_data)
 
     def precompute_min_timeseries_len(self):
         for file in self.all_files_list:

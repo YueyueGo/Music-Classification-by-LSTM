@@ -63,8 +63,8 @@ def main():
             and os.path.isfile(genre_features.train_Y_preprocessed_data)
             and os.path.isfile(genre_features.dev_X_preprocessed_data)
             and os.path.isfile(genre_features.dev_Y_preprocessed_data)
-            and os.path.isfile(genre_features.test_X_preprocessed_data)
-            and os.path.isfile(genre_features.test_Y_preprocessed_data)
+            # and os.path.isfile(genre_features.test_X_preprocessed_data)
+            # and os.path.isfile(genre_features.test_Y_preprocessed_data)
     ):
         print("Preprocessed files exist, deserializing npy files")
         genre_features.load_deserialize_data()
@@ -74,20 +74,20 @@ def main():
 
     train_X = torch.from_numpy(genre_features.train_X).type(torch.Tensor)
     dev_X = torch.from_numpy(genre_features.dev_X).type(torch.Tensor)
-    test_X = torch.from_numpy(genre_features.test_X).type(torch.Tensor)
+    # test_X = torch.from_numpy(genre_features.test_X).type(torch.Tensor)
 
     # Targets is a long tensor of size (N,) which tells the true class of the sample.
     train_Y = torch.from_numpy(genre_features.train_Y).type(torch.LongTensor)
     dev_Y = torch.from_numpy(genre_features.dev_Y).type(torch.LongTensor)
-    test_Y = torch.from_numpy(genre_features.test_Y).type(torch.LongTensor)
+    # test_Y = torch.from_numpy(genre_features.test_Y).type(torch.LongTensor)
 
     # Convert {training, test} torch.Tensors
     print("Training X shape: " + str(genre_features.train_X.shape))
     print("Training Y shape: " + str(genre_features.train_Y.shape))
     print("Validation X shape: " + str(genre_features.dev_X.shape))
     print("Validation Y shape: " + str(genre_features.dev_Y.shape))
-    print("Test X shape: " + str(genre_features.test_X.shape))
-    print("Test Y shape: " + str(genre_features.test_Y.shape))
+    # print("Test X shape: " + str(genre_features.test_X.shape))
+    # print("Test Y shape: " + str(genre_features.test_Y.shape))
 
     savefig = True
 
